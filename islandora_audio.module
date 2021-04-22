@@ -174,12 +174,20 @@ function template_preprocess_islandora_audio(array &$variables) {
     isset($islandora_object['OBJ']) &&
     islandora_audio_datastream_valid_for_playback($islandora_object['OBJ']) ? 'OBJ' : 'PROXY_MP3';
 
+  if (isset($islandora_object['PEAKS'])) {
+    $peaks_url = url("islandora/object/{$islandora_object->id}/datastream/PEAKS", array('absolute' => TRUE));
+	}
+  else {
+	  $peaks_url = null;
+  }
+
   if (islandora_datastream_access(ISLANDORA_VIEW_OBJECTS, $islandora_object[$dsid])) {
     $audio_url = url("islandora/object/{$islandora_object->id}/datastream/$dsid", array('absolute' => TRUE));
 
     $audio_params += array(
       "url" => $audio_url,
       "mime" => 'audio/mpeg',
+      "peaks" => $peaks_url,
     );
 
     module_load_include('inc', 'islandora', 'includes/solution_packs');

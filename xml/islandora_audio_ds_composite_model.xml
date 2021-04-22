@@ -1,34 +1,37 @@
-<?xml version="1.0"?>
+
 <dsCompositeModel xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
-  <!-- using this as a guide -->
+  
   <dsTypeModel ID="DC">
-    <form FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" MIME="application/xml"/>
+    <form FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" MIME="application/xml"></form>
   </dsTypeModel>
   <dsTypeModel ID="RELS-EXT" optional="true">
-    <form FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" MIME="application/rdf+xml"/>
+    <form FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" MIME="application/rdf+xml"></form>
   </dsTypeModel>
   <dsTypeModel ID="RELS-INT" optional="true">
-    <form FORMAT_URI="info:fedora/fedora-system:FedoraRELSInt-1.0" MIME="application/rdf+xml"/>
+    <form FORMAT_URI="info:fedora/fedora-system:FedoraRELSInt-1.0" MIME="application/rdf+xml"></form>
   </dsTypeModel>
   <dsTypeModel ID="MODS" optional="true">
-    <form FORMAT_URI="http://www.loc.gov/mods/v3" MIME="application/xml"/>
+    <form FORMAT_URI="http://www.loc.gov/mods/v3" MIME="application/xml"></form>
   </dsTypeModel>
   <dsTypeModel ID="OBJ" optional="true">
-    <form MIME="audio/mpeg"/>
-    <form MIME="audio/wav"/>
-    <form MIME="audio/x-wav"/>
-    <form MIME="audio/vnd.wave"/>
-    <form MIME="audio/flac"/>
+    <form MIME="audio/mpeg"></form>
+    <form MIME="audio/wav"></form>
+    <form MIME="audio/x-wav"></form>
+    <form MIME="audio/vnd.wave"></form>
+    <form MIME="audio/flac"></form>
   </dsTypeModel>
-  <dsTypeModel ID="PROXY_MP3" optional="false">
-    <form MIME="audio/mpeg"/>
+  <dsTypeModel ID="PROXY_MP3" optional="true">
+    <form MIME="audio/mpeg"></form>
   </dsTypeModel>
-  <dsTypeModel ID="TN" optional="false">
-    <form MIME="image/jpeg"/>
-    <form MIME="image/png"/>
-    <form MIME="image/gif"/>
+  <dsTypeModel ID="PEAKS" optional="true">
+    <form MIME="application/json"></form>
+  </dsTypeModel>
+  <dsTypeModel ID="TN" optional="true">
+    <form MIME="image/jpeg"></form>
+    <form MIME="image/png"></form>
+    <form MIME="image/gif"></form>
   </dsTypeModel>
   <dsTypeModel ID="TECHMD">
-    <form MIME="application/xml"/>
+    <form MIME="application/xml"></form>
   </dsTypeModel>
 </dsCompositeModel>
