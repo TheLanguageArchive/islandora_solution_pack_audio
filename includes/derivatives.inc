@@ -77,6 +77,26 @@ function islandora_audio_create_mp3(AbstractObject $object, $force = FALSE) {
 }
 
 /**
+ * Creates the PEAKS derivative from the given audio file.
+ *
+ * @param AbstractObject $object
+ *   An AbstractObject representing an object in Fedora.
+ * @param bool $force
+ *   Whether the derivative generation is being forced.
+ *
+ * @return array
+ *   An array describing the outcome of the PEAKS creation.
+ *
+ * @see hook_islandora_derivative()
+ */
+function islandora_audio_create_peaks(AbstractObject $object, $force = FALSE) {
+  // placeholder function, not yet implemented. Needs to generate peaks file in json format using
+  // "audiowaveform": https://github.com/bbc/audiowaveform
+  // see https://wavesurfer-js.org/faq/
+  return;
+}
+
+/**
  * Creates the TN derivative for the audio object.
  *
  * @param AbstractObject $object
